@@ -8,7 +8,7 @@ public class ConnectionFactory {
 
     public Connection getConnection() {
         try {
-            return DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/BDPROJETOPDM", "usuario", "123");
+            return DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/BDPROJETOPDMLIVROS", "USUARIO", "123");
 
         } catch (Exception e) {
             throw new RuntimeException(e);
