@@ -24,9 +24,9 @@ public class LivrosDAO {
     public void cadastrarLivros(Livros liv){
         try {
             String sql =
-                    "INSERT INTO tb_clientes(titulodaobra, editora, recomendacao, recomendaria, autor, numerodepaginas, colecao, nota, genero,"
+                    "INSERT INTO tb_livros(titulodaobra, editora, recomendacao, recomendaria, autor, numerodepaginas, colecao, nota, genero,"
                     + "filme, personagemfavorito)"
-                    + " values(?,?,?,?,?,?,?,?,?,?,?) ";
+                    + " values(?,?,?,?,?,?,?,?,?,?,?,?,?) ";
             
             PreparedStatement stmt = connection.prepareStatement(sql);
             

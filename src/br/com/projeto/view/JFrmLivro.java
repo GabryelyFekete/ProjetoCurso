@@ -78,9 +78,7 @@ public class JFrmLivro extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         txtRecomendacao = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        txtRecomendaria = new javax.swing.JTextField();
         txtEditora = new javax.swing.JTextField();
-        txtNumPaginas = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         txtColecao = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
@@ -89,7 +87,9 @@ public class JFrmLivro extends javax.swing.JFrame {
         txtFilme = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         txtPersonagemFavorito = new javax.swing.JTextField();
+        txtRecomendaria = new javax.swing.JTextField();
         txtNota = new javax.swing.JTextField();
+        txtNumPaginas = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         txtNomeTabela = new javax.swing.JTextField();
@@ -193,12 +193,6 @@ public class JFrmLivro extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel9.setText("Recomendaria?");
 
-        txtRecomendaria.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtRecomendariaActionPerformed(evt);
-            }
-        });
-
         jLabel17.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel17.setText("Coleção:");
 
@@ -217,6 +211,12 @@ public class JFrmLivro extends javax.swing.JFrame {
 
         jLabel12.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel12.setText("Personagem favorito:");
+
+        txtRecomendaria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtRecomendariaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPDadosObraLayout = new javax.swing.GroupLayout(jPDadosObra);
         jPDadosObra.setLayout(jPDadosObraLayout);
@@ -255,17 +255,17 @@ public class JFrmLivro extends javax.swing.JFrame {
                                 .addComponent(txtRecomendaria, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPDadosObraLayout.createSequentialGroup()
                                 .addComponent(txtAutor, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
+                                .addGap(24, 24, 24)
                                 .addComponent(jLabel6)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtNumPaginas, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(36, 36, 36)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtNumPaginas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel17)
                                 .addGap(18, 18, 18)
                                 .addComponent(txtColecao, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPDadosObraLayout.createSequentialGroup()
-                                .addComponent(txtNota, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
+                                .addComponent(txtNota, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel18)
                                 .addGap(18, 18, 18)
                                 .addComponent(txtGenero, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -273,7 +273,7 @@ public class JFrmLivro extends javax.swing.JFrame {
                                 .addComponent(jLabel19)
                                 .addGap(18, 18, 18)
                                 .addComponent(txtFilme, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(115, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
         jPDadosObraLayout.setVerticalGroup(
             jPDadosObraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -287,35 +287,40 @@ public class JFrmLivro extends javax.swing.JFrame {
                     .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
                     .addComponent(btnPesquisar))
-                .addGap(7, 7, 7)
-                .addGroup(jPDadosObraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtEditora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel8)
-                    .addComponent(txtRecomendacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9)
-                    .addComponent(txtRecomendaria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPDadosObraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPDadosObraLayout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addGroup(jPDadosObraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtEditora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8)
+                            .addComponent(txtRecomendacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9)
+                            .addComponent(txtRecomendaria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPDadosObraLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel5)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPDadosObraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtAutor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel6)
-                    .addComponent(txtNumPaginas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel17)
-                    .addComponent(txtColecao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPDadosObraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPDadosObraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtAutor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel17)
+                        .addComponent(txtColecao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtNumPaginas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel6))
+                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPDadosObraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPDadosObraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel7)
                         .addComponent(jLabel18)
                         .addComponent(txtGenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel19)
-                        .addComponent(txtFilme, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(txtNota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtFilme, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtNota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPDadosObraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel12)
-                    .addComponent(txtPersonagemFavorito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPDadosObraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtPersonagemFavorito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12))
                 .addContainerGap(48, Short.MAX_VALUE))
         );
 
@@ -339,13 +344,13 @@ public class JFrmLivro extends javax.swing.JFrame {
         tbLivros.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         tbLivros.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Código", "Titulo da obra", "Editora", "Recomendação", "Recomendaria", "Autor (a)", "Nº de páginas", "Coleção", "Nota", "Gênero", "Filme", "Inicio da leitura", "Fim da leitura", "Personagem favorito"
+                "Código", "Titulo da obra", "Nº de páginas", "Autor (a)", "Editora", "Recomendação", "Recomendaria", "Coleção", "Nota", "Gênero", "Filme", "Personagem favorito"
             }
         ));
         tbLivros.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -495,7 +500,7 @@ public class JFrmLivro extends javax.swing.JFrame {
         txtRecomendaria.setText(tbLivros.getValueAt(tbLivros.getSelectedRow(), 8).toString());
         txtGenero.setText(tbLivros.getValueAt(tbLivros.getSelectedRow(), 9).toString());
         txtFilme.setText(tbLivros.getValueAt(tbLivros.getSelectedRow(), 10).toString());
-       txtPersonagemFavorito.setText(tbLivros.getValueAt(tbLivros.getSelectedRow(), 13).toString());
+        txtPersonagemFavorito.setText(tbLivros.getValueAt(tbLivros.getSelectedRow(), 11).toString());
     }//GEN-LAST:event_tbLivrosMouseClicked
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
@@ -576,10 +581,6 @@ public class JFrmLivro extends javax.swing.JFrame {
         
     }//GEN-LAST:event_txtNomeTabelaKeyPressed
 
-    private void txtRecomendariaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRecomendariaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtRecomendariaActionPerformed
-
     private void txtRecomendacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRecomendacaoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtRecomendacaoActionPerformed
@@ -603,6 +604,10 @@ public class JFrmLivro extends javax.swing.JFrame {
     private void txtColecaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtColecaoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtColecaoActionPerformed
+
+    private void txtRecomendariaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRecomendariaActionPerformed
+      // TODO add your handling code here:
+    }//GEN-LAST:event_txtRecomendariaActionPerformed
 
     /**
      * @param args the command line arguments
