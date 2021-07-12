@@ -350,7 +350,7 @@ public class JFrmLivro extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Código", "Titulo da obra", "Nº de páginas", "Autor (a)", "Editora", "Recomendação", "Recomendaria", "Coleção", "Nota", "Gênero", "Filme", "Personagem favorito"
+                "Código", "Titulo da obra", "Autor (a)", "Editora", "Coleção", "Nº de páginas", "Nota", "Recomendação", "Recomendaria", "Gênero", "Filme", "Personagem favorito"
             }
         ));
         tbLivros.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -571,7 +571,7 @@ public class JFrmLivro extends javax.swing.JFrame {
                 livros.getRecomendaria(),
                 livros.getGenero(),
                 livros.getFilme(),
-                livros.getPersonagemfavorito()
+                livros.getPersonagemfavorito(),
             });
         }
     }//GEN-LAST:event_btnPesquisarTabelaActionPerformed

@@ -498,13 +498,13 @@
                       <Table columnCount="12" rowCount="4">
                         <Column editable="true" title="C&#xf3;digo" type="java.lang.Object"/>
                         <Column editable="true" title="Titulo da obra" type="java.lang.Object"/>
-                        <Column editable="true" title="N&#xba; de p&#xe1;ginas" type="java.lang.Object"/>
                         <Column editable="true" title="Autor (a)" type="java.lang.Object"/>
                         <Column editable="true" title="Editora" type="java.lang.Object"/>
+                        <Column editable="true" title="Cole&#xe7;&#xe3;o" type="java.lang.Object"/>
+                        <Column editable="true" title="N&#xba; de p&#xe1;ginas" type="java.lang.Object"/>
+                        <Column editable="true" title="Nota" type="java.lang.Object"/>
                         <Column editable="true" title="Recomenda&#xe7;&#xe3;o" type="java.lang.Object"/>
                         <Column editable="true" title="Recomendaria" type="java.lang.Object"/>
-                        <Column editable="true" title="Cole&#xe7;&#xe3;o" type="java.lang.Object"/>
-                        <Column editable="true" title="Nota" type="java.lang.Object"/>
                         <Column editable="true" title="G&#xea;nero" type="java.lang.Object"/>
                         <Column editable="true" title="Filme" type="java.lang.Object"/>
                         <Column editable="true" title="Personagem favorito" type="java.lang.Object"/>
