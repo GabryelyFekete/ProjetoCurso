@@ -174,7 +174,7 @@ public class LivrosDAO {
     public void alterarLivro(Livros liv){
          try {
                        
-            String sql = "UPDATE tb_livros SET titulodaobra = ?,autor = ?, editora = ?, colecao = ?, numerodepaginas = ?"
+            String sql = "UPDATE tb_livros SET titulodaobra = ?,autor = ?, editora = ?, colecao = ?, numerodepaginas = ?,"
                     + "nota = ?, recomendacao = ?, recomendaria = ?, genero = ?, filme = ?, personagemfavorito = ?"
                     + " where id = ?";
             PreparedStatement stmt = connection.prepareStatement(sql);
