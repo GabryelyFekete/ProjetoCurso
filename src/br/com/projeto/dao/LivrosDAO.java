@@ -86,12 +86,12 @@ public class LivrosDAO {
         }
     }
     
-    public List<Livros> consultaPorNome(String nome){
+    public List<Livros> consultaPorAutor(String autor){
         try {
             List<Livros> lista = new ArrayList<>();            
-            String sql = "SELECT * FROM tb_livros WHERE nome like ?";
+            String sql = "SELECT * FROM tb_livros WHERE autor like ?";
             PreparedStatement stmt = connection.prepareStatement(sql);
-            stmt.setString(1, nome);
+            stmt.setString(1, autor);
             
             ResultSet rs = stmt.executeQuery();
             
@@ -121,11 +121,11 @@ public class LivrosDAO {
         }
     }
     
-    public Livros buscaPorNome(String nome){
+    public Livros buscaPorAutor(String autor){
         try {
-            String sql = "SELECT * FROM tb_livros WHERE nome = ?";
+            String sql = "SELECT * FROM tb_livros WHERE autor = ?";
             PreparedStatement stmt = connection.prepareStatement(sql);
-            stmt.setString(1, nome);
+            stmt.setString(1, autor);
             
             ResultSet rs = stmt.executeQuery();
             
