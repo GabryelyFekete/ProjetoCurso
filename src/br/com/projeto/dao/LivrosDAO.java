@@ -25,8 +25,8 @@ public class LivrosDAO {
         try {
             String sql =
                     "INSERT INTO tb_livros(titulodaobra, autor, editora, colecao, numerodepaginas, nota, recomendacao, "
-                    + "recomendaria, genero, filme, personagemfavorito)"
-                    + " values(?,?,?,?,?,?,?,?,?,?,?) ";
+                    + "recomendaria, genero, filme, personagemfavorito, capitulos)"
+                    + " values(?,?,?,?,?,?,?,?,?,?,?,?) ";
             
             PreparedStatement stmt = connection.prepareStatement(sql);
             
@@ -41,6 +41,7 @@ public class LivrosDAO {
             stmt.setString(9, liv.getGenero());
             stmt.setString(10, liv.getFilme());
             stmt.setString(11, liv.getPersonagemfavorito());
+            stmt.setInt(12, liv.getCapitulos());
             
             stmt.execute();
             stmt.close();
@@ -75,6 +76,7 @@ public class LivrosDAO {
                 liv.setGenero(rs.getString("genero"));
                 liv.setFilme(rs.getString("filme"));
                 liv.setPersonagemfavorito(rs.getString("personagemfavorito"));
+                liv.setCapitulos(rs.getInt("capitulos"));
                 
                 lista.add(liv);
             }
@@ -110,6 +112,7 @@ public class LivrosDAO {
                 liv.setGenero(rs.getString("genero"));
                 liv.setFilme(rs.getString("filme"));
                 liv.setPersonagemfavorito(rs.getString("personagemfavorito"));
+                liv.setCapitulos(rs.getInt("capitulos"));
                 
                 lista.add(liv);
             }
@@ -144,6 +147,7 @@ public class LivrosDAO {
                 liv.setGenero(rs.getString("genero"));
                 liv.setFilme(rs.getString("filme")); 
                 liv.setPersonagemfavorito(rs.getString("personagemfavorito"));
+                liv.setCapitulos(rs.getInt("capitulos"));
             }
             return liv;      
         } catch (Exception e) {
@@ -175,7 +179,7 @@ public class LivrosDAO {
          try {
                        
             String sql = "UPDATE tb_livros SET titulodaobra = ?,autor = ?, editora = ?, colecao = ?, numerodepaginas = ?,"
-                    + "nota = ?, recomendacao = ?, recomendaria = ?, genero = ?, filme = ?, personagemfavorito = ?"
+                    + "nota = ?, recomendacao = ?, recomendaria = ?, genero = ?, filme = ?, personagemfavorito = ?, capitulos = ?"
                     + " where id = ?";
             PreparedStatement stmt = connection.prepareStatement(sql);
             
@@ -190,8 +194,9 @@ public class LivrosDAO {
             stmt.setString(9, liv.getGenero());
             stmt.setString(10, liv.getFilme());
             stmt.setString(11, liv.getPersonagemfavorito());
+            stmt.setInt(12, liv.getCapitulos());
             
-            stmt.setInt(12, liv.getId());
+            stmt.setInt(13, liv.getId());
             
             stmt.execute();
             stmt.close();

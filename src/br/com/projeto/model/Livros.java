@@ -13,7 +13,8 @@ public class Livros {
     private String recomendaria;
     private String genero;
     private String filme; 
-    private String personagemfavorito; 
+    private String personagemfavorito;
+    private int capitulos;
 
     public int getId() {
         return id;
@@ -110,6 +111,14 @@ public class Livros {
     public void setPersonagemfavorito(String personagemfavorito) {
         this.personagemfavorito = personagemfavorito;
     }
-    
+
+    public int getCapitulos() {
+        return capitulos;
+    }
+
+    public void setCapitulos(int capitulos) {
+        this.capitulos = capitulos;
+    }
+
+
 }
-    
